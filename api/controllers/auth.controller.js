@@ -68,3 +68,12 @@ export const signIn = async (req, res, next) => {
     next(error);
   }
 };
+
+export const signOut = async (req, res, next) => {
+  try {
+    res.clearCookie("token");
+    res.status(200).json({ message: "Token has been cleared" });
+  } catch (error) {
+    next(error);
+  }
+};
