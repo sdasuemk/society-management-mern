@@ -1,8 +1,11 @@
 import User from "../models/user.model.js";
 import bcrypt from "bcryptjs";
 import jwt from "jsonwebtoken";
-import crypto from "crypto";
+// import crypto from "crypto";
+import dotenv from "dotenv";
 import { errorHandler } from "../utils/error/error.js";
+
+dotenv.config();
 
 export const signUp = async (req, res, next) => {
   try {
@@ -50,7 +53,8 @@ export const signIn = async (req, res, next) => {
     if (!isValidPassword) return next(401, "Wrong credentials!");
 
     // Generate a secure random JWT secret
-    const jwtSecret = crypto.randomBytes(64).toString("hex");
+    // const jwtSecret = crypto.randomBytes(64).toString("hex");
+    const jwtSecret = process.env.JWT_SECRET;
 
     const token = jwt.sign({ data: existingUser._id }, jwtSecret, {
       expiresIn: "1h",
