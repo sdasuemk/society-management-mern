@@ -151,10 +151,10 @@ const SignUp = () => {
             </form>
           </Form>
         </section>
-        <section className="flex flex-col items-center mt-4">
+        <section className="flex flex-row justify-center items-center mt-4 gap-0.5">
           <p>Have an account?</p>
           <Link href="/signin">
-            <span className="text-blue-700">sign in</span>
+            <span className="text-blue-700">Sign-In</span>
           </Link>
         </section>
       </section>
