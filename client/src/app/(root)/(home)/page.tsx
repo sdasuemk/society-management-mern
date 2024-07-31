@@ -1,9 +1,9 @@
-import { Button } from "@/components/ui/button"
+import SignUp from "@/app/(auth)/signup/page"
 
 export default function Home() {
   return (
     <div>
-      <Button>Click me</Button>
+      <SignUp />
     </div>
   )
 }
