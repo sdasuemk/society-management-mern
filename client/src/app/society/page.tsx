@@ -1,3 +1,4 @@
+import RegistrationForm from '@/components/societyDetails/RegistrationForm'
 import React from 'react'
 
 const Society = () => {
@@ -6,6 +7,8 @@ const Society = () => {
     <main>
         <section className='society__details'>society__details</section>
         <section className='society__events'>society__events</section>
+
+        <RegistrationForm />
     </main>
   )
 }

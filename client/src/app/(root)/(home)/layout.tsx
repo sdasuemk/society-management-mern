@@ -1,3 +1,5 @@
+import Header from "@/components/header/Header";
+
 const HomeLayout = ({
   children,
 }: Readonly<{
@@ -5,6 +7,9 @@ const HomeLayout = ({
 }>) => {
   return (
     <main>
+      <section className="">
+        <Header />
+      </section>
       <div>{children}</div>
     </main>
   );
