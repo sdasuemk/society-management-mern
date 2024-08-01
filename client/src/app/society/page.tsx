@@ -1,4 +1,5 @@
 import RegistrationForm from '@/components/societyDetails/RegistrationForm'
+import UserOwnSociety from '@/components/societyDetails/UserOwnSociety'
 import React from 'react'
 
 const Society = () => {
@@ -9,6 +10,7 @@ const Society = () => {
         <section className='society__events'>society__events</section>
 
         <RegistrationForm />
+        <UserOwnSociety />
     </main>
   )
 }
