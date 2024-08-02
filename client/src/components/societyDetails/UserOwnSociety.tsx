@@ -1,4 +1,7 @@
 import React from "react";
+import { FaAddressCard } from "react-icons/fa6";
+import { MdOutlinePhoneIphone } from "react-icons/md";
+import { MdEmail } from "react-icons/md";
 
 import {
   Card,
@@ -21,14 +24,21 @@ const UserOwnSociety = () => {
             </h1>
           </div>
         </section> */}
-        <section className="" id="society-address">
+        <section className="w-full p-3" id="society-address">
           <Card>
-            <CardHeader>
-              <CardTitle className="font-extrabold">ABC Society</CardTitle>
+            <CardHeader className="text-center">
+              <CardTitle className="font-extrabold border-b-2 pb-2">ABC Society</CardTitle>
               <CardDescription>Card Description</CardDescription>
             </CardHeader>
             <CardContent>
-              <p>Card Content</p>
+              <section className="">
+                <section className="society__address">
+                    <p><FaAddressCard /> </p>
+                    <p><MdOutlinePhoneIphone /> </p>
+                    <p><MdEmail /></p>
+
+                </section>
+              </section>
             </CardContent>
             <CardFooter>
               <p>Card Footer</p>
